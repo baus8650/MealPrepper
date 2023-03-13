@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct MealPlannerApp: App {
-    let persistenceController = PersistenceController.shared
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            HouseholdListView()
+                .environment(\.managedObjectContext, CoreDataStack.shared.context)
         }
     }
 }

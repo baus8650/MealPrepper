@@ -16,6 +16,13 @@
 		2205BE2729BF32CE000B5231 /* MealPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE2629BF32CE000B5231 /* MealPlannerTests.swift */; };
 		2205BE3129BF32CE000B5231 /* MealPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE3029BF32CE000B5231 /* MealPlannerUITests.swift */; };
 		2205BE3329BF32CE000B5231 /* MealPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE3229BF32CE000B5231 /* MealPlannerUITestsLaunchTests.swift */; };
+		2205BE4029BF330F000B5231 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE3F29BF330F000B5231 /* CoreDataStack.swift */; };
+		2205BE4229BF3329000B5231 /* CloudSharingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE4129BF3329000B5231 /* CloudSharingController.swift */; };
+		2205BE4629BF3388000B5231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE4529BF3388000B5231 /* AppDelegate.swift */; };
+		2205BE4B29BF39C3000B5231 /* HouseholdListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE4A29BF39C3000B5231 /* HouseholdListView.swift */; };
+		2205BE4D29BF39E9000B5231 /* AddHouseholdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE4C29BF39E9000B5231 /* AddHouseholdView.swift */; };
+		2205BE4F29BF3A0B000B5231 /* HouseholdDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205BE4E29BF3A0B000B5231 /* HouseholdDetailView.swift */; };
+		22C93CA329BF4158000B720D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C93CA229BF4158000B720D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,14 @@
 		2205BE2C29BF32CE000B5231 /* MealPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2205BE3029BF32CE000B5231 /* MealPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerUITests.swift; sourceTree = "<group>"; };
 		2205BE3229BF32CE000B5231 /* MealPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2205BE3F29BF330F000B5231 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		2205BE4129BF3329000B5231 /* CloudSharingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSharingController.swift; sourceTree = "<group>"; };
+		2205BE4529BF3388000B5231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2205BE4729BF37E1000B5231 /* MealPlanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MealPlanner.entitlements; sourceTree = "<group>"; };
+		2205BE4A29BF39C3000B5231 /* HouseholdListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdListView.swift; sourceTree = "<group>"; };
+		2205BE4C29BF39E9000B5231 /* AddHouseholdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseholdView.swift; sourceTree = "<group>"; };
+		2205BE4E29BF3A0B000B5231 /* HouseholdDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdDetailView.swift; sourceTree = "<group>"; };
+		22C93CA229BF4158000B720D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +114,16 @@
 		2205BE0E29BF32CD000B5231 /* MealPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				2213543C29BFD92500589FA0 /* Services */,
+				2205BE4829BF39B0000B5231 /* Households */,
+				2205BE4729BF37E1000B5231 /* MealPlanner.entitlements */,
 				2205BE0F29BF32CD000B5231 /* MealPlannerApp.swift */,
 				2205BE1129BF32CD000B5231 /* ContentView.swift */,
 				2205BE1329BF32CE000B5231 /* Assets.xcassets */,
-				2205BE1829BF32CE000B5231 /* Persistence.swift */,
 				2205BE1D29BF32CE000B5231 /* Info.plist */,
 				2205BE1A29BF32CE000B5231 /* MealPlanner.xcdatamodeld */,
 				2205BE1529BF32CE000B5231 /* Preview Content */,
+				2205BE4529BF3388000B5231 /* AppDelegate.swift */,
 			);
 			path = MealPlanner;
 			sourceTree = "<group>";
@@ -133,6 +151,43 @@
 				2205BE3229BF32CE000B5231 /* MealPlannerUITestsLaunchTests.swift */,
 			);
 			path = MealPlannerUITests;
+			sourceTree = "<group>";
+		};
+		2205BE4829BF39B0000B5231 /* Households */ = {
+			isa = PBXGroup;
+			children = (
+				22C93CA129BF414D000B720D /* Extensions */,
+				2205BE4929BF39B8000B5231 /* Views */,
+			);
+			path = Households;
+			sourceTree = "<group>";
+		};
+		2205BE4929BF39B8000B5231 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2205BE4A29BF39C3000B5231 /* HouseholdListView.swift */,
+				2205BE4C29BF39E9000B5231 /* AddHouseholdView.swift */,
+				2205BE4E29BF3A0B000B5231 /* HouseholdDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2213543C29BFD92500589FA0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2205BE4129BF3329000B5231 /* CloudSharingController.swift */,
+				2205BE3F29BF330F000B5231 /* CoreDataStack.swift */,
+				2205BE1829BF32CE000B5231 /* Persistence.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		22C93CA129BF414D000B720D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22C93CA229BF4158000B720D /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +320,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2205BE4629BF3388000B5231 /* AppDelegate.swift in Sources */,
+				2205BE4F29BF3A0B000B5231 /* HouseholdDetailView.swift in Sources */,
+				2205BE4029BF330F000B5231 /* CoreDataStack.swift in Sources */,
 				2205BE1929BF32CE000B5231 /* Persistence.swift in Sources */,
+				2205BE4D29BF39E9000B5231 /* AddHouseholdView.swift in Sources */,
 				2205BE1229BF32CD000B5231 /* ContentView.swift in Sources */,
+				2205BE4B29BF39C3000B5231 /* HouseholdListView.swift in Sources */,
 				2205BE1029BF32CD000B5231 /* MealPlannerApp.swift in Sources */,
+				2205BE4229BF3329000B5231 /* CloudSharingController.swift in Sources */,
+				22C93CA329BF4158000B720D /* Extensions.swift in Sources */,
 				2205BE1C29BF32CE000B5231 /* MealPlanner.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,12 +486,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MealPlanner/MealPlanner.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MealPlanner/Preview Content\"";
-				DEVELOPMENT_TEAM = CKQNA48U9B;
+				DEVELOPMENT_TEAM = 89JNN3239D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealPlanner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -440,8 +505,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timbausch.MealPlanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timbausch.MealPrepper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,12 +519,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MealPlanner/MealPlanner.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MealPlanner/Preview Content\"";
-				DEVELOPMENT_TEAM = CKQNA48U9B;
+				DEVELOPMENT_TEAM = 89JNN3239D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealPlanner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -469,8 +538,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timbausch.MealPlanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timbausch.MealPrepper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
